@@ -71,21 +71,53 @@
         }
 
         </style>
-        <ul class="legend">
-          <li>
-            <span class="legend-title">Loan payoff time</span>
-          </li>
-          <li>
-            <span class="legend-color legend-color-min"></span>
-            <span class="legend-value">10 months</span>
-
-          </li>
-          <li>
-            <span class="legend-color legend-color-max"></span>
-            <span class="legend-value">30 months</span>
-
-          </li>
-        </ul>        
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <ul class="legend">
+              <li>
+                <span class="legend-title">Loan payoff time</span>
+              </li>
+              <li>
+                <span class="legend-color legend-color-min"></span>
+                <span class="legend-value">10 months</span>
+              </li>
+              <li>
+                <span class="legend-color legend-color-max"></span>
+                <span class="legend-value">30 months</span>
+              </li>
+            </ul>  
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <ul class="legend">
+              <li>
+                <span class="legend-title">Highlights</span>
+              </li>
+              <li>
+                <span class="legend-color" style="background-color: #8d93ac;"></span>
+                <span class="legend-value">California: 33 months</span>
+              </li>
+              <li>
+                <span class="legend-color" style="background-color: #8d93ac;"></span>
+                <span class="legend-value">Alabama: 31 months</span>
+              </li>
+              <li>
+                <span class="legend-color" style="background-color: #8d93ac;"></span>
+                <span class="legend-value">Illinois: 31 months</span>
+              </li>
+              <li>
+                <span class="legend-color" style="background-color: #b7cbdc;"></span>
+                <span class="legend-value">North Dakota: 17 months</span>
+              </li>
+              <li>
+                <span class="legend-color" style="background-color: #b7cbdc;"></span>
+                <span class="legend-value">Alaska: 16 months</span>
+              </li>
+              <li>
+                <span class="legend-color" style="background-color: #c5dbe9;"></span>
+                <span class="legend-value">South Dakota: 15 months</span>
+              </li>
+          </div>
+        </div>
         <div class="row justify-content-center mt-5 pt-5">
           <div class="col-auto">
             <table
@@ -533,7 +565,7 @@
 
       var color = d3.scale
         .quantize()
-        .domain([1, 33])
+        .domain([10, 30])
         .range(colors);
 
       var svg = d3
