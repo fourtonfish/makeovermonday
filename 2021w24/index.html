@@ -43,13 +43,20 @@
           graduated and are able to use <strong>10%</strong> of it to pay your student loan, how
           long does it take to pay it off?
         </p>
-        <div align="center" class="mt-5 mb-5 pt-5 pb-5 bg-light">
+        <div align="center" class="mt-5 mb-5 p-3 pt-5 pb-5 bg-light">
           <svg></svg>
         </div>
 
         <style>
+          svg{
+            max-width: 540px;
+          }
           .legend{
              list-style-type: none;
+          }
+          .legend .legend-title{
+             display: inline-block;
+             margin-bottom: 10px;
           }
          .legend .legend-color{
             display: inline-block;
@@ -64,14 +71,16 @@
         }
 
         </style>
-
         <ul class="legend">
-          <li class="">
+          <li>
+            <span class="legend-title">Loan payoff time</span>
+          </li>
+          <li>
             <span class="legend-color legend-color-min"></span>
             <span class="legend-value">10 months</span>
 
           </li>
-          <li class="">
+          <li>
             <span class="legend-color legend-color-max"></span>
             <span class="legend-value">30 months</span>
 
@@ -529,8 +538,9 @@
 
       var svg = d3
         .select("svg")
-        .attr("width", 12 * options.rectWidth)
-        .attr("height", 8 * options.rectHeight);
+        // .attr("width", 12 * options.rectWidth)
+        // .attr("height", 8 * options.rectHeight)
+        .attr("viewBox", `0 0 ${ 12 * options.rectWidth } ${ 8 * options.rectHeight }`);
 
       var sEnter = svg
         .append("g")
