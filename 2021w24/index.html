@@ -1,85 +1,606 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <title>Makeover Monday 📈📊</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
+    <title>Makeover Monday 2021: Week 24</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.glitch.com/eb654d3c-2546-41ad-b05f-cfd11e18c638%2Ffavicon.ico" />
-    <link rel="icon" type="image/png" href="https://cdn.glitch.com/eb654d3c-2546-41ad-b05f-cfd11e18c638%2Ffavicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="https://cdn.glitch.com/eb654d3c-2546-41ad-b05f-cfd11e18c638%2Ffavicon-16x16.png" sizes="16x16" />
-  </head>  
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.com/eb654d3c-2546-41ad-b05f-cfd11e18c638%2Ffavicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.com/eb654d3c-2546-41ad-b05f-cfd11e18c638%2Ffavicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.com/eb654d3c-2546-41ad-b05f-cfd11e18c638%2Ffavicon-16x16.png"
+      sizes="16x16"
+    />
+  </head>
   <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
+    <main class="flex-shrink-0 mb-5">
       <div class="container">
-        <h1 class="mt-5">Makeover Monday 📈📊</h1>
-        <p class="lead">Coming soon!</p>
+        <h1 class="mt-5">Makeover Monday 2021: Week 24</h1>
+        <p class="lead">Which Schools Create the Most Student Loans?</p>
+        <p>
+          Assuming that you earn an <strong>average salary</strong> in the state where you
+          graduated and are able to use <strong>10%</strong> of it to pay your student loan, how
+          long does it take to pay it off?
+        </p>
+        <div align="center" class="mt-5 mb-5 pt-5 pb-5 bg-light">
+          <svg></svg>
+        </div>
+
+        <style>
+          .legend{
+             list-style-type: none;
+          }
+         .legend .legend-color{
+            display: inline-block;
+            width: 1em;
+            height: 1em;            
+          }
+        .legend .legend-color-min{
+            background-color: #b2ddf0;
+        }
+        .legend .legend-color-max{
+            background-color: #8d93ac;
+        }
+
+        </style>
+
+        <ul class="legend">
+          <li class="">
+            <span class="legend-color legend-color-min"></span>
+            <span class="legend-value">10 months</span>
+
+          </li>
+          <li class="">
+            <span class="legend-color legend-color-max"></span>
+            <span class="legend-value">30 months</span>
+
+          </li>
+        </ul>        
+        <div class="row justify-content-center mt-5 pt-5">
+          <div class="col-auto">
+            <table
+              class="table table-responsive table-striped table-hover centered mt-5"
+              style="max-width: 900px"
+            >
+              <thead>
+                <tr>
+                  <th title="Field #1">State</th>
+                  <th title="Field #2">$ Loan per recipient</th>
+                  <th title="Field #3">$ Annual Salary</th>
+                  <th title="Field #4">Months to pay off</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AK</td>
+                  <td align="right">6162.21</td>
+                  <td align="right">46113</td>
+                  <td align="right">16</td>
+                </tr>
+                <tr>
+                  <td>AL</td>
+                  <td align="right">9148.62</td>
+                  <td align="right">35155</td>
+                  <td align="right">31</td>
+                </tr>
+                <tr>
+                  <td>AR</td>
+                  <td align="right">7467.52</td>
+                  <td align="right">39140</td>
+                  <td align="right">22</td>
+                </tr>
+                <tr>
+                  <td>AZ</td>
+                  <td align="right">8043.52</td>
+                  <td align="right">37315</td>
+                  <td align="right">25</td>
+                </tr>
+                <tr>
+                  <td>CA</td>
+                  <td align="right">11250.19</td>
+                  <td align="right">40877</td>
+                  <td align="right">33</td>
+                </tr>
+                <tr>
+                  <td>CO</td>
+                  <td align="right">9453.77</td>
+                  <td align="right">41521</td>
+                  <td align="right">27</td>
+                </tr>
+                <tr>
+                  <td>CT</td>
+                  <td align="right">8729.13</td>
+                  <td align="right">39401</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td>DE</td>
+                  <td align="right">6566.59</td>
+                  <td align="right">41062</td>
+                  <td align="right">19</td>
+                </tr>
+                <tr>
+                  <td>FL</td>
+                  <td align="right">7953.47</td>
+                  <td align="right">33927</td>
+                  <td align="right">28</td>
+                </tr>
+                <tr>
+                  <td>GA</td>
+                  <td align="right">7984.36</td>
+                  <td align="right">35997</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td>HI</td>
+                  <td align="right">9617.92</td>
+                  <td align="right">48957</td>
+                  <td align="right">23</td>
+                </tr>
+                <tr>
+                  <td>IA</td>
+                  <td align="right">6785.76</td>
+                  <td align="right">35591</td>
+                  <td align="right">22</td>
+                </tr>
+                <tr>
+                  <td>ID</td>
+                  <td align="right">6688.51</td>
+                  <td align="right">38346</td>
+                  <td align="right">20</td>
+                </tr>
+                <tr>
+                  <td>IL</td>
+                  <td align="right">10068.39</td>
+                  <td align="right">38929</td>
+                  <td align="right">31</td>
+                </tr>
+                <tr>
+                  <td>IN</td>
+                  <td align="right">7668.99</td>
+                  <td align="right">37076</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td>KS</td>
+                  <td align="right">7573.89</td>
+                  <td align="right">36113</td>
+                  <td align="right">25</td>
+                </tr>
+                <tr>
+                  <td>KY</td>
+                  <td align="right">8235.92</td>
+                  <td align="right">42914</td>
+                  <td align="right">23</td>
+                </tr>
+                <tr>
+                  <td>LA</td>
+                  <td align="right">8426.31</td>
+                  <td align="right">36075</td>
+                  <td align="right">28</td>
+                </tr>
+                <tr>
+                  <td>MA</td>
+                  <td align="right">10716.53</td>
+                  <td align="right">48948</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td>MD</td>
+                  <td align="right">9967.31</td>
+                  <td align="right">43894</td>
+                  <td align="right">27</td>
+                </tr>
+                <tr>
+                  <td>ME</td>
+                  <td align="right">7678.71</td>
+                  <td align="right">38017</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td>MI</td>
+                  <td align="right">8079.98</td>
+                  <td align="right">38926</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td>MN</td>
+                  <td align="right">8714.86</td>
+                  <td align="right">37197</td>
+                  <td align="right">28</td>
+                </tr>
+                <tr>
+                  <td>MO</td>
+                  <td align="right">9772.63</td>
+                  <td align="right">37923</td>
+                  <td align="right">30</td>
+                </tr>
+                <tr>
+                  <td>MS</td>
+                  <td align="right">8232.64</td>
+                  <td align="right">33828</td>
+                  <td align="right">29</td>
+                </tr>
+                <tr>
+                  <td>MT</td>
+                  <td align="right">7494.96</td>
+                  <td align="right">37703</td>
+                  <td align="right">23</td>
+                </tr>
+                <tr>
+                  <td>NC</td>
+                  <td align="right">8090.30</td>
+                  <td align="right">35364</td>
+                  <td align="right">27</td>
+                </tr>
+                <tr>
+                  <td>ND</td>
+                  <td align="right">6675.60</td>
+                  <td align="right">46383</td>
+                  <td align="right">17</td>
+                </tr>
+                <tr>
+                  <td>NE</td>
+                  <td align="right">9192.82</td>
+                  <td align="right">43068</td>
+                  <td align="right">25</td>
+                </tr>
+                <tr>
+                  <td>NH</td>
+                  <td align="right">6320.89</td>
+                  <td align="right">42787</td>
+                  <td align="right">17</td>
+                </tr>
+                <tr>
+                  <td>NJ</td>
+                  <td align="right">8336.43</td>
+                  <td align="right">37975</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td>NM</td>
+                  <td align="right">7686.61</td>
+                  <td align="right">35043</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td>NV</td>
+                  <td align="right">10468.97</td>
+                  <td align="right">45748</td>
+                  <td align="right">27</td>
+                </tr>
+                <tr>
+                  <td>NY</td>
+                  <td align="right">10774.64</td>
+                  <td align="right">44287</td>
+                  <td align="right">29</td>
+                </tr>
+                <tr>
+                  <td>OH</td>
+                  <td align="right">7525.36</td>
+                  <td align="right">36860</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td>OK</td>
+                  <td align="right">8271.96</td>
+                  <td align="right">40028</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td>OR</td>
+                  <td align="right">9792.80</td>
+                  <td align="right">44539</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td>PA</td>
+                  <td align="right">8615.26</td>
+                  <td align="right">38308</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td>RI</td>
+                  <td align="right">7027.57</td>
+                  <td align="right">47263</td>
+                  <td align="right">17</td>
+                </tr>
+                <tr>
+                  <td>SC</td>
+                  <td align="right">7797.28</td>
+                  <td align="right">41499</td>
+                  <td align="right">22</td>
+                </tr>
+                <tr>
+                  <td>SD</td>
+                  <td align="right">5779.23</td>
+                  <td align="right">45029</td>
+                  <td align="right">15</td>
+                </tr>
+                <tr>
+                  <td>TN</td>
+                  <td align="right">9489.08</td>
+                  <td align="right">37129</td>
+                  <td align="right">30</td>
+                </tr>
+                <tr>
+                  <td>TX</td>
+                  <td align="right">7721.30</td>
+                  <td align="right">37081</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td>UT</td>
+                  <td align="right">6557.65</td>
+                  <td align="right">36438</td>
+                  <td align="right">21</td>
+                </tr>
+                <tr>
+                  <td>VA</td>
+                  <td align="right">9818.66</td>
+                  <td align="right">42503</td>
+                  <td align="right">27</td>
+                </tr>
+                <tr>
+                  <td>VT</td>
+                  <td align="right">9233.19</td>
+                  <td align="right">40284</td>
+                  <td align="right">27</td>
+                </tr>
+                <tr>
+                  <td>WA</td>
+                  <td align="right">9696.25</td>
+                  <td align="right">45367</td>
+                  <td align="right">25</td>
+                </tr>
+                <tr>
+                  <td>WI</td>
+                  <td align="right">6808.05</td>
+                  <td align="right">36891</td>
+                  <td align="right">22</td>
+                </tr>
+                <tr>
+                  <td>WV</td>
+                  <td align="right">8013.80</td>
+                  <td align="right">38493</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td>WY</td>
+                  <td align="right">5962.30</td>
+                  <td align="right">39673</td>
+                  <td align="right">18</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 class="mt-5">Sources</h2>
+
+        <ul>
+          <li>
+            2021/W24: Which Schools Create the Most Student Loans?
+            <a href="https://data.world/makeovermonday/2021w24">data.world</a>
+          </li>
+          <li>
+            What Is the Average College Grads Salary by State
+            <a
+              href="https://www.ziprecruiter.com/Salaries/What-Is-the-Average-College-Grads-Salary-by-State"
+              >ziprecruiter.com</a
+            >
+          </li>
+        </ul>
       </div>
     </main>
     <footer class="footer mt-auto py-3 bg-light">
       <div class="container">
         <p class="text-center">
           <a class="link-dark" href="/">Home</a> |
-          <a class="link-dark" href="mailto:stefan@fourtonfish.com">Contact</a> |
-          <a class="link-dark" href="https://twitter.com/fourtonfish">@fourtonfish</a>
+          <a class="link-dark" href="mailto:stefan@fourtonfish.com">Contact</a>
+          |
+          <a class="link-dark" href="https://twitter.com/fourtonfish"
+            >@fourtonfish</a
+          >
         </p>
-    <div class="container pb-5 border-top">
-      <div class="row align-items-center mt-5">
-        <div class="col-sm-6 col-md-4 mx-auto text-center">
-          <p>
-            <a href="https://fightfascism.glitch.me/">
-              <img class="lazy-loaded" title="Fight Fascism sticker by Angus Johnston" alt="Fight fascism" src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Ffight-fascism.png">
-            </a>
-            <noscript>
-              <a href="https://fightfascism.glitch.me/">
-                <img class="lazy-load" title="Fight Fascism sticker by Angus Johnston" alt="Fight fascism" src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Ffight-fascism.png">
-              </a>
-            </noscript>
-          </p>
+        <div class="container pb-5 border-top">
+          <div class="row align-items-center mt-5">
+            <div class="col-sm-6 col-md-4 mx-auto text-center">
+              <p>
+                <a href="https://fightfascism.glitch.me/">
+                  <img
+                    class="lazy-loaded"
+                    title="Fight Fascism sticker by Angus Johnston"
+                    alt="Fight fascism"
+                    src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Ffight-fascism.png"
+                  />
+                </a>
+                <noscript>
+                  <a href="https://fightfascism.glitch.me/">
+                    <img
+                      class="lazy-load"
+                      title="Fight Fascism sticker by Angus Johnston"
+                      alt="Fight fascism"
+                      src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Ffight-fascism.png"
+                    />
+                  </a>
+                </noscript>
+              </p>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto text-center">
+              <p>
+                <a href="https://blacklivesmatter.com/">
+                  <img
+                    class="lazy-loaded"
+                    alt="Black Lives Matter"
+                    title="Black Lives Matter logo"
+                    src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Fblm.png"
+                  />
+                </a>
+                <noscript>
+                  <a href="https://blacklivesmatter.com/">
+                    <img
+                      class="lazy-load"
+                      alt="Black Lives Matter"
+                      title="Black Lives Matter logo"
+                      src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Fblm.png"
+                    />
+                  </a>
+                </noscript>
+              </p>
+            </div>
+            <div class="col-sm-6 col-md-4 mx-auto text-center">
+              <p>
+                <a href="https://indieweb.org/">
+                  <img
+                    class="lazy-loaded"
+                    alt="IndieWeb"
+                    title="Support #indieweb!"
+                    src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Findiewebcamp.png"
+                  />
+                </a>
+                <noscript>
+                  <a href="https://indieweb.org/">
+                    <img
+                      class="lazy-load"
+                      alt="IndieWeb"
+                      title="Support #indieweb!"
+                      src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Findiewebcamp.png"
+                    />
+                  </a>
+                </noscript>
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-4 mx-auto text-center">
-          <p>
-            <a href="https://blacklivesmatter.com/">
-              <img class="lazy-loaded" alt="Black Lives Matter" title="Black Lives Matter logo" src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Fblm.png">
-            </a>
-            <noscript>
-              <a href="https://blacklivesmatter.com/">
-                <img class="lazy-load" alt="Black Lives Matter" title="Black Lives Matter logo" src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Fblm.png">
-              </a>
-            </noscript>
-          </p>              
-        </div>      
-        <div class="col-sm-6 col-md-4 mx-auto text-center">      
-          <p>
-            <a href="https://indieweb.org/">
-              <img class="lazy-loaded" alt="IndieWeb" title="Support #indieweb!" src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Findiewebcamp.png">
-            </a>
-            <noscript>
-              <a href="https://indieweb.org/">
-                <img class="lazy-load" alt="IndieWeb" title="Support #indieweb!" src="https://cdn.glitch.com/4e796d0c-e4ff-46fc-a546-de1ccc1e8663%2Findiewebcamp.png">
-              </a>
-            </noscript>
-          </p>
-        </div>
-      </div>
-    </div>        
       </div>
     </footer>
-    <script type="text/javascript">
-    var sc_project=12550764; 
-    var sc_invisible=1; 
-    var sc_security="68d6de4a"; 
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>    
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <!--
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    -->
+    <script src="https:////cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="/2021w24/data.js"></script>
+    <script>
+      var options = {
+        rectWidth: 45,
+        rectHeight: 45
+      };
+
+      var colors = [
+        "#b2ddf0",
+        "#92bcd8",
+        "#769cbf",
+        "#5d7da7",
+        "#46608f",
+        "#334577",
+        "#232d5f"
+      ];
+
+      var color = d3.scale
+        .quantize()
+        .domain([1, 33])
+        .range(colors);
+
+      var svg = d3
+        .select("svg")
+        .attr("width", 12 * options.rectWidth)
+        .attr("height", 8 * options.rectHeight);
+
+      var sEnter = svg
+        .append("g")
+        .selectAll("g")
+        .data(gridmapLayoutUsa)
+        .enter()
+        .append("g")
+        .attr("preserveAspectRatio", "xMinYMin")
+        .attr("transform", function(d) {
+          return (
+            "translate( " +
+            d.x * options.rectWidth +
+            "," +
+            d.y * options.rectHeight +
+            " )"
+          );
+        });
+
+      sEnter
+        .append("rect")
+        .attr("width", options.rectWidth)
+        .attr("height", options.rectHeight)
+        .attr("vector-effect", "non-scaling-stroke")
+        .style("opacity", 0.5)
+        .style("stroke", "#aaa")
+        .style("fill", function(d) {
+          return color(d.value);
+        });
+
+      sEnter
+        .append("text")
+        .attr("x", options.rectWidth / 2)
+        .attr("y", options.rectHeight / 2 + 2)
+        .style("text-anchor", "middle")
+        .text(function(d) {
+          return d.key;
+        });
+
+      // var colorScale = d3.scaleQuantile()
+      //                    .domain([10, 30])
+      //                    .range(colors);
+
+      // var legend = d3.legendColor()
+      //     .scale(colorScale)
+      //     .cells(3);
+    $(document).ready( function () {
+        $('table').DataTable();
+    } );      
     </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js"
-    async></script>
-    <noscript><div class="statcounter"><a title="free web stats"
-    href="https://statcounter.com/" target="_blank"><img
-    class="statcounter"
-    src="https://c.statcounter.com/12550764/0/68d6de4a/1/"
-    alt="free web stats"></a></div></noscript>
+    <script type="text/javascript">
+      var sc_project = 12550764;
+      var sc_invisible = 1;
+      var sc_security = "68d6de4a";
+    </script>
+    <script
+      type="text/javascript"
+      src="https://www.statcounter.com/counter/counter.js"
+      async
+    ></script>
+    <noscript
+      ><div class="statcounter">
+        <a
+          title="free web stats"
+          href="https://statcounter.com/"
+          target="_blank"
+          ><img
+            class="statcounter"
+            src="https://c.statcounter.com/12550764/0/68d6de4a/1/"
+            alt="free web stats"
+        /></a></div
+    ></noscript>
   </body>
 </html>
