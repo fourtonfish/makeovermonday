@@ -2,4 +2,4 @@
 
 My submissions to [Makeover Monday](https://www.makeovermonday.co.uk/).
 
-[Browse](https://makeovermonday.glitch.me/)
+[Browse](https://fourtonfish.com/project/makeover-monday/)
